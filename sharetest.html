@@ -1,0 +1,13 @@
+<a href="sms:?body=hellotherethisisthemessage">sms share</a>
+<button id="navigatorShare">navigator share</button>
+<script>
+    document.addEventListener("click", function (event) {
+        if (event.target.matches('#navigatorShare')) {
+            window.document.navigator.share({
+                title: "ShareTEst",
+                text: "Please help me share this",
+                url: "www.google.com",
+            })
+        }
+    })
+</script>
